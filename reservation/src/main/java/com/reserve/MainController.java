@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 
 	@RequestMapping("/bookingform")
-	public String bookingform(Model model)
+	public String bookingForm(Model model)
 	{
 		Reservation res=new Reservation();
 		model.addAttribute("reservation",res);
@@ -18,7 +18,7 @@ public class MainController {
 		
 	}
 	@RequestMapping("/submitForm")
-	public String reservationform(@ModelAttribute("reservation") Reservation res)
+	public String reservationForm(@ModelAttribute("reservation") Reservation res)
 	{
 		return "confirmation-form";
 	}
